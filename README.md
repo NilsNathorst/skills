@@ -28,3 +28,6 @@ npx skills add NilsNathorst/skills --skill grill-me
 | [create-github-issue](./create-github-issue/SKILL.md) | Files a well-structured GitHub issue with explicit Claude instructions. Used by `find-fixes` and callable standalone. |
 | [fix-github-issue](./fix-github-issue/SKILL.md) | Reads a GitHub issue, implements the fix, and opens a PR. |
 | [review-comments](./review-comments/SKILL.md) | Finds the PR for the current branch, triages review comments (needs fix / already addressed / discussion), implements approved ones, and suggests a commit message. |
+| [dep-audit](./dep-audit/SKILL.md) | Scans for outdated, deprecated, or vulnerable dependencies, triages by severity, and optionally updates selected ones. |
+| [pr-review](./pr-review/SKILL.md) | Fetches a PR diff and produces a structured code review grouped by severity (blocking / suggestion / nit), optionally posting it to GitHub. |
+| [explain-codebase](./explain-codebase/SKILL.md) | Generates a structured walkthrough of a codebase or subsystem covering purpose, architecture, key files, data flow, and conventions. |
