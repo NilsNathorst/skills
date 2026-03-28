@@ -26,7 +26,7 @@ Use `gh issue create` with this template:
 ```
 ## Problem
 
-[Clear description of what is wrong and where. No file paths — describe the module and behavior.]
+[Clear description of what is wrong and where. Include file path and line number if known.]
 
 ## Fix
 
