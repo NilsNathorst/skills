@@ -1,3 +1,8 @@
+---
+name: git-guardrails-claude-code
+description: Set up a PreToolUse hook that blocks destructive git operations (push, hard reset, force clean, branch deletion, working directory restore). Use when user wants to prevent Claude from running dangerous git commands or wants to set up git guardrails.
+---
+
 # Git Guardrails for Claude Code
 
 This setup guide enables a safety mechanism that prevents Claude from executing destructive git operations.
