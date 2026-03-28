@@ -32,7 +32,12 @@ Read the issue in full. The **Instructions for Claude** and **Fix** sections tel
 
 ### 4. Open a PR
 
+Create a feature branch from `main` before committing. Never commit directly to `main`.
+
 ```bash
+git checkout main && git checkout -b fix/issue-<number>
+git add <files> && git commit -m "<message>"
+git push -u origin fix/issue-<number>
 gh pr create --title "<short title>" --body "$(cat <<'EOF'
 ## What
 
