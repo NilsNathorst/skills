@@ -17,10 +17,12 @@ Find the open PR for the current branch, triage its review comments, and impleme
 
 > "I'm going to look at the PR for `<branch-name>` in `<repo-name>` — is that right?"
 
+Once the repo is identified, pass `--repo owner/name` to all `gh` commands below.
+
 ### 2. Find the PR
 
 ```bash
-gh pr view --json number,title,url,headRefName
+gh pr view --repo owner/name --json number,title,url,headRefName
 ```
 
 If no open PR exists for the branch, tell the user and stop.
@@ -29,11 +31,12 @@ If no open PR exists for the branch, tell the user and stop.
 
 ```bash
 # Review thread comments (inline code comments)
-gh api repos/:owner/:repo/pulls/<PR-number>/comments --paginate \
+# Replace owner/name with the actual repo (e.g. acme/frontend)
+gh api repos/owner/name/pulls/<PR-number>/comments --paginate \
   --jq '.[] | {id, path, line, body, user: .user.login, resolved: (.original_commit_id != .commit_id)}'
 
 # General PR comments (top-level conversation)
-gh pr view <PR-number> --comments --json comments \
+gh pr view <PR-number> --repo owner/name --comments --json comments \
   --jq '.comments[] | {author: .author.login, body, createdAt}'
 ```
 
