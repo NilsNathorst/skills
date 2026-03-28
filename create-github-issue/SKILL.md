@@ -49,7 +49,7 @@ Use `gh issue create` with this template:
 
 Run:
 ```bash
-gh issue create --title "<title>" --body "<body>" --label "<category>"
+gh issue create --title "<title>" --body "<body>"
 ```
 
 ### 3. Confirm
