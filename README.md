@@ -1,6 +1,6 @@
 # skills
 
-A personal collection of Claude Code skills by [NilsNathorst](https://github.com/NilsNathorst).
+A personal collection of Claude Code skills by [NilsNathorst](https://github.com/NilsNathorst). Several skills are based on [mattpocock/skills](https://github.com/mattpocock/skills).
 
 ## Install
 
