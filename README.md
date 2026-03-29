@@ -16,6 +16,15 @@ Install a single skill:
 npx skills add NilsNathorst/skills --skill grill-me
 ```
 
+## Update
+
+Check for updates and pull the latest versions:
+
+```bash
+npx skills check     # see what's changed
+npx skills update    # update all skills
+```
+
 ## Skills
 
 | Skill | Description |
