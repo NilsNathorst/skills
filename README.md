@@ -31,3 +31,4 @@ npx skills add NilsNathorst/skills --skill grill-me
 | [dep-audit](./dep-audit/SKILL.md) | Scans for outdated, deprecated, or vulnerable dependencies, triages by severity, and optionally updates selected ones. |
 | [pr-review](./pr-review/SKILL.md) | Fetches a PR diff and produces a structured code review grouped by severity (blocking / suggestion / nit), optionally posting it to GitHub. |
 | [explain-codebase](./explain-codebase/SKILL.md) | Generates a structured walkthrough of a codebase or subsystem covering purpose, architecture, key files, data flow, and conventions. |
+| [obsidian-vault](./obsidian-vault/SKILL.md) | Searches, creates, and manages notes in an Obsidian vault with wikilinks and index notes. Asks for vault path on first use. |
