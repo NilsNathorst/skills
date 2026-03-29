@@ -21,45 +21,9 @@ If multiple are present (e.g. a monorepo), handle each ecosystem separately and 
 
 ### 2. Run audit and outdated commands
 
-Run the appropriate commands for each detected ecosystem. Capture output — do not stop on non-zero exit codes (audit commands return non-zero when vulnerabilities exist).
+Run the appropriate commands for each detected ecosystem. Capture output — do not stop on non-zero exit codes (audit commands return non-zero when vulnerabilities exist). If a tool is not installed, note it and skip — do not install tools.
 
-**Node (npm)**:
-```bash
-npm audit --json 2>/dev/null | head -200
-npm outdated --json 2>/dev/null | head -100
-```
-
-**Node (pnpm)**:
-```bash
-pnpm audit --json 2>/dev/null | head -200
-pnpm outdated --json 2>/dev/null | head -100
-```
-
-**Node (yarn)**:
-```bash
-yarn audit --json 2>/dev/null | head -200
-yarn outdated --json 2>/dev/null | head -100
-```
-
-**Python (pip)**:
-```bash
-pip audit --format=json 2>/dev/null | head -200
-pip list --outdated --format=json 2>/dev/null | head -100
-```
-
-**Rust (cargo)**:
-```bash
-cargo audit --json 2>/dev/null | head -200
-cargo outdated --format=json 2>/dev/null | head -100
-```
-
-**Go**:
-```bash
-go list -m -u -json all 2>/dev/null | head -200
-govulncheck ./... 2>/dev/null | head -100
-```
-
-If a tool is not installed (e.g. `pip audit`, `cargo audit`), note it in the output and skip — do not install tools.
+See [REFERENCE.md](REFERENCE.md) for ecosystem-specific commands.
 
 ### 3. Categorize findings
 
@@ -98,14 +62,7 @@ Ask: "Which should I update? (e.g. 1,2,6,7 or 'all safe' or 'all' or 'none')"
 
 ### 5. Apply selected updates
 
-Run the appropriate update command per ecosystem:
-
-- **npm**: `npm install <package>@<version>`
-- **pnpm**: `pnpm update <package>@<version>`
-- **yarn**: `yarn upgrade <package>@<version>`
-- **pip**: `pip install <package>==<version>`
-- **cargo**: update version in `Cargo.toml`, then `cargo update -p <package>`
-- **go**: `go get <package>@<version>`
+Run the appropriate update command per ecosystem. See [REFERENCE.md](REFERENCE.md) for ecosystem-specific commands.
 
 For major version bumps, check for a migration guide first and warn about known breaking changes before proceeding.
 
